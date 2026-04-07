@@ -85,6 +85,10 @@ jobs:
       # --parallel          → ejecuta tareas independientes en paralelo
       - name: Build Debug APK
         run: ./gradlew assembleDebug --build-cache --configuration-cache --parallel
+        
+      -   name: Buscar APK
+      
+          run:  find . -name "*apk"
 
       # ── 7. ARTIFACT ────────────────────────────────────────────────────────────
       - name: Upload Debug APK
